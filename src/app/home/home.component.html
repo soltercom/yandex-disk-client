@@ -1,0 +1,5 @@
+<div *ngIf="(authService.authStatus$ | async)?.isAuthenticated; else doLogin">
+</div>
+<ng-template #doLogin>
+  <app-login></app-login>
+</ng-template>
